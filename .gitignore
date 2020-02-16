@@ -1,4 +1,8 @@
+# input images
 *.jpg
+
+# computed input vector
+*.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
