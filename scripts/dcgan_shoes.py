@@ -37,13 +37,13 @@ EPSILON = 1e-6
 
 def get_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--root', default='../../Resources/InData/', type=str)
+	parser.add_argument('--root', default='../Data/InData/', type=str)
 	parser.add_argument('--batchSize', default=128, type=int)
 	parser.add_argument('--maxEpochs', default=25, type=int)
 	parser.add_argument('--nz', default=100, type=int)
 	parser.add_argument('--lr', default=2e-4, type=float)
 	parser.add_argument('--fSize', default=64, type=int)  #multiple of filters to use
-	parser.add_argument('--outDir', default='../../Resources/ExperimentsSHOES', type=str)
+	parser.add_argument('--outDir', default='../Data/ExperimentsSHOES', type=str)
 	parser.add_argument('--commit', required=False, type=str)
 	parser.add_argument('--gpuNo', default=0, type=int)
 	parser.add_argument('--useNoise', action='store_true')
