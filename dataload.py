@@ -35,7 +35,7 @@ class CELEBA(data.Dataset):
         self.filename='celebA'
         self.transform=transform
         self.idx = attributes.index(label)
-        print self.idx
+        print(self.idx)
 
         # now load the picked numpy arrays
         if self.train:
@@ -43,8 +43,8 @@ class CELEBA(data.Dataset):
             self.train_data = self.train_data.transpose((0, 2, 3, 1))  # convert to HWC
             train_labels = np.load(join(self.root, self.filename, 'yAllTrain.npy'))[Ntest:, self.idx]
             self.train_labels = (train_labels.astype(int)+1) /2
-            print np.shape(self.train_labels), np.shape(self.train_data)
-            print np.unique(self.train_labels)
+            print(np.shape(self.train_labels), np.shape(self.train_data))
+            print(np.unique(self.train_labels))
 
         else:
             self.test_data = np.load(join(self.root, self.filename, 'xTrain.npy'), mmap_mode='r')[:Ntest]
@@ -123,8 +123,8 @@ class CELEBA_ALL_LABELS(data.Dataset):
             self.train_data = self.train_data.transpose((0, 2, 3, 1))  # convert to HWC
             train_labels = np.load(join(self.root, self.filename, 'yAllTrain.npy'))[Ntest:, self.idx]
             self.train_labels = (train_labels.astype(int)+1) /2
-            print np.shape(self.train_labels), np.shape(self.train_data)
-            print np.unique(self.train_labels)
+            print(np.shape(self.train_labels), np.shape(self.train_data))
+            print(np.unique(self.train_labels))
 
         else:
             self.test_data = np.load(join(self.root, self.filename, 'xTrain.npy'), mmap_mode='r')[:Ntest]
@@ -220,8 +220,8 @@ class SHOES(data.Dataset):
             self.train_data = xData[Ntest:]
             self.train_labels = yData[Ntest:]
             self.train_labels = self.train_labels.astype(int)
-            print np.shape(self.train_labels), np.shape(self.train_data)
-            print np.unique(self.train_labels)
+            print(np.shape(self.train_labels), np.shape(self.train_data))
+            print(np.unique(self.train_labels))
 
         else: #test
             self.test_data = xData[:Ntest]
@@ -301,8 +301,8 @@ class OMNI(data.Dataset): #omniglot
             self.train_data = xData.transpose((0, 2, 3, 1)) 
             self.train_labels = yData
             self.train_labels = self.train_labels.astype(int)
-            print np.shape(self.train_labels), np.shape(self.train_data)
-            print np.unique(self.train_labels)
+            print(np.shape(self.train_labels), np.shape(self.train_data))
+            print(np.unique(self.train_labels))
 
         else: #test
             xData = np.load(join(self.root, self.filename, 'omni_eval_X.npy'), mmap_mode='r')

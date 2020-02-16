@@ -37,14 +37,14 @@ EPSILON = 1e-6
 
 def get_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--root', default='../../../../data/', type=str)
+	parser.add_argument('--root', default='../../Resources/InData/', type=str)
 	parser.add_argument('--batchSize', default=128, type=int)
 	parser.add_argument('--maxEpochs', default=25, type=int)
 	parser.add_argument('--nz', default=100, type=int)
 	parser.add_argument('--lr', default=2e-4, type=float)
 	parser.add_argument('--fSize', default=64, type=int)  #multiple of filters to use
-	parser.add_argument('--outDir', default='../../ExperimentsSHOES', type=str)
-	parser.add_argument('--commit', required=True, type=str)
+	parser.add_argument('--outDir', default='../../Resources/ExperimentsSHOES', type=str)
+	parser.add_argument('--commit', required=False, type=str)
 	parser.add_argument('--gpuNo', default=0, type=int)
 	parser.add_argument('--useNoise', action='store_true')
 	parser.add_argument('--pi', default=0.5, type=float)
@@ -68,7 +68,7 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 	
 	####### Create a new folder to save results and model info #######
 	exDir = make_new_folder(opts.outDir)
-	print 'Outputs will be saved to:',exDir
+	print('Outputs will be saved to:',exDir)
 	save_input_args(exDir, opts)
 
 	#noise level
@@ -153,12 +153,12 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 			
 			####### Print info #######
 			if i%100==1:
-				print '[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
-					% (e, i, genLoss.data[0], disLoss.data[0], time()-T)
+				print('[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
+					% (e, i, genLoss.data[0], disLoss.data[0], time()-T))
 
 		####### Tests #######
 		gen.eval()
-		print 'Outputs will be saved to:',exDir
+		print('Outputs will be saved to:',exDir)
 		#save some samples
 		samples = gen.sample_x(49)
 		save_image(samples.data, join(exDir,'epoch'+str(e)+'.png'), normalize=True)
@@ -179,7 +179,7 @@ if __name__=='__main__':
 
 	####### Data set #######
 	IM_SIZE = opts.imSize
-	print 'Prepare data loaders...'
+	print('Prepare data loaders...')
 	transform = transforms.Compose([transforms.ToPILImage(), transforms.Resize((IM_SIZE, IM_SIZE)), transforms.RandomHorizontalFlip(),\
 	 transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	trainDataset = SHOES(root=opts.root, train=True, transform=transform)
@@ -189,7 +189,7 @@ if __name__=='__main__':
 		transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	testDataset = SHOES(root=opts.root, train=False, transform=transform)
 	testLoader = torch.utils.data.DataLoader(testDataset, batch_size=opts.batchSize, shuffle=False)
-	print 'Data loaders ready.'
+	print('Data loaders ready.')
 
 	###### Create model #####
 

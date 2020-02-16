@@ -67,7 +67,7 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 	
 	####### Create a new folder to save results and model info #######
 	exDir = make_new_folder(opts.outDir)
-	print 'Outputs will be saved to:',exDir
+	print('Outputs will be saved to:',exDir)
 	save_input_args(exDir, opts)
 
 	#noise level
@@ -152,13 +152,13 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 			
 			####### Print info #######
 			if i%100==1:
-				print '[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
-					% (e, i, genLoss.data[0], disLoss.data[0], time()-T)
+				print('[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
+					% (e, i, genLoss.data[0], disLoss.data[0], time()-T))
 
 
 		####### Tests #######
 		gen.eval()
-		print 'Outputs will be saved to:',exDir
+		print('Outputs will be saved to:',exDir)
 		#save some samples
 		samples = gen.sample_x(49)
 		save_image(samples.data, join(exDir,'epoch'+str(e)+'.png'), normalize=True)
@@ -178,7 +178,7 @@ if __name__=='__main__':
 	opts = get_args()
 
 	####### Data set #######
-	print 'Prepare data loaders...'
+	print('Prepare data loaders...')
 	transform = transforms.Compose([transforms.ToPILImage(), transforms.RandomHorizontalFlip(),\
 	 transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	trainDataset = CELEBA(root=opts.root, train=True, transform=transform)
@@ -188,7 +188,7 @@ if __name__=='__main__':
 		transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	testDataset = CELEBA(root=opts.root, train=False, transform=transform)
 	testLoader = torch.utils.data.DataLoader(testDataset, batch_size=opts.batchSize, shuffle=False)
-	print 'Data loaders ready.'
+	print('Data loaders ready.')
 
 	###### Create model #####
 	IM_SIZE = 64

@@ -59,11 +59,11 @@ class GEN(nn.Module):
 		return samples
 
 	def save_params(self, exDir):
-		print 'saving params...'
+		print('saving params...')
 		torch.save(self.state_dict(), join(exDir, 'gen_params'))
 
 	def load_params(self, exDir, gpuNo=None):
-		print 'loading params...'
+		print('loading params...')
 		if gpuNo is None:
 			self.load_state_dict(torch.load(join(exDir, 'gen_params')))
 		else:
@@ -90,7 +90,7 @@ class DIS(nn.Module):
 		self.dis3b = nn.BatchNorm2d(fSize * 4)
 		self.dis4 = nn.Conv2d(fSize * 4, fSize * 8, 4, stride=2, padding=1, bias=False)
 		self.dis4b = nn.BatchNorm2d(fSize * 8)
-		self.dis5 = nn.Linear((fSize * 8) * inSize * inSize, 1)
+		self.dis5 = nn.Linear(int((fSize * 8) * inSize * inSize), 1)
 	
 		self.useCUDA = torch.cuda.is_available()
 
@@ -115,12 +115,12 @@ class DIS(nn.Module):
 		return self.dis(x)
 
 	def save_params(self, exDir):
-		print 'saving params...'
+		print('saving params...')
 		torch.save(self.state_dict(), join(exDir, 'dis_params'))
 
 
 	def load_params(self, exDir):
-		print 'loading params...'
+		print('loading params...')
 		self.load_state_dict(torch.load(join(exDir, 'dis_params'), map_location=lambda storage, loc: storage.cuda(0)))
 
 	def ones(self, N):
@@ -189,11 +189,11 @@ class GEN1D(nn.Module):
 		return samples
 
 	def save_params(self, exDir):
-		print 'saving params...'
+		print('saving params...')
 		torch.save(self.state_dict(), join(exDir, 'gen_params'))
 
 	def load_params(self, exDir, gpuNo=None):
-		print 'loading params...'
+		print('loading params...')
 		if gpuNo is None:
 			self.load_state_dict(torch.load(join(exDir, 'gen_params')))
 		else:
@@ -244,12 +244,12 @@ class DIS1D(nn.Module):
 		return self.dis(x)
 
 	def save_params(self, exDir):
-		print 'saving params...'
+		print('saving params...')
 		torch.save(self.state_dict(), join(exDir, 'dis_params'))
 
 
 	def load_params(self, exDir):
-		print 'loading params...'
+		print('loading params...')
 		self.load_state_dict(torch.load(join(exDir, 'dis_params'), map_location=lambda storage, loc: storage.cuda(0)))
 
 	def ones(self, N):
