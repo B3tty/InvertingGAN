@@ -1,4 +1,4 @@
-# DCGAN to be trained on CelebA with no labels and have params stored
+# DCGAN to be trained on Shoes with no labels and have params stored
 import sys
 sys.path.append('../')
 
@@ -129,7 +129,7 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 						p.data.clamp_(-c, c)
 
 
-				losses['dis'].append(disLoss.data[0])
+				losses['dis'].append(disLoss.data.item())
 
 
 			####### Calculate generator loss #######
@@ -149,12 +149,12 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 			genLoss.backward()
 			genOptimizer.step()
 
-			losses['gen'].append(genLoss.data[0])
+			losses['gen'].append(genLoss.data.item())
 			
 			####### Print info #######
 			if i%100==1:
 				print('[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
-					% (e, i, genLoss.data[0], disLoss.data[0], time()-T))
+					% (e, i, genLoss.data.item(), disLoss.data.item(), time()-T))
 
 		####### Tests #######
 		gen.eval()
