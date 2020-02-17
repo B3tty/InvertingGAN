@@ -80,7 +80,7 @@ def find_z(gen, x, nz, lr, exDir, maxEpochs=100):
 		optZ.step()
 
 		losses['rec'].append(recLoss.data[0])
-		print '[%d] loss: %0.5f' % (e, recLoss.data[0])
+		print('[%d] loss: %0.5f' % (e, recLoss.data[0]))
 
 		#plot training losses
 		if e>0:
@@ -133,7 +133,7 @@ def find_batch_z(gen, x, nz, lr, exDir, maxEpochs=100, alpha=1e-6, batchNo=0):
 		losses['logProb'].append(logProb.mean().data[0])
 
 		if e%100==0:
-			print '[%d] loss: %0.5f, recLoss: %0.5f, regMean: %0.5f' % (e, loss.data[0], recLoss.data[0], logProb.mean().data[0])
+			print('[%d] loss: %0.5f, recLoss: %0.5f, regMean: %0.5f' % (e, loss.data[0], recLoss.data[0], logProb.mean().data[0]))
 			# save_image(xHAT.data, join(exDir, 'rec'+str(e)+'.png'), normalize=True)
 
 		#plot training losses
@@ -156,31 +156,31 @@ if __name__=='__main__':
 	try:
 		os.mkdir(exDir)
 	except:
-		print 'already exists'
+		print('already exists')
 
-	print 'Outputs will be saved to:',exDir
+	print('Outputs will be saved to:',exDir)
 	save_input_args(exDir, opts)
 
 	####### Test data set #######
 	IM_SIZE = opts.imSize
 	
-	print 'Prepare data loaders...'
+	print('Prepare data loaders...')
 	transform = transforms.Compose([ transforms.ToPILImage(), transforms.Resize((IM_SIZE, IM_SIZE)), \
 		transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	if opts.data == 'CELEBA':
 		testDataset = CELEBA(root=opts.root, train=False, transform=transform, Ntest=100)  #most models trained with Ntest=1000, but using 100 to prevent memory errors
 		gen = GEN(imSize=IM_SIZE, nz=opts.nz, fSize=opts.fSize)
 	elif opts.data == 'OMNI':
-		print 'using Omniglot eval dataset...'
+		print('using Omniglot eval dataset...')
 		testDataset = OMNI(root=opts.root, train=False, transform=transform)
 		gen = GEN1D(imSize=IM_SIZE, nz=opts.nz, fSize=opts.fSize)
 	else:
 		testDataset = SHOES(root=opts.root, train=False, transform=transform)
 		gen = GEN(imSize=IM_SIZE, nz=opts.nz, fSize=opts.fSize)
 	testLoader = torch.utils.data.DataLoader(testDataset, batch_size=opts.batchSize, shuffle=False)
-	print 'Data loaders ready.'
+	print('Data loaders ready.')
 
-	print "Test Data:", len(testDataset)
+	print("Test Data Size: ", len(testDataset))
 
 	###### Create model and load parameters #####
 	if gen.useCUDA:
@@ -188,7 +188,7 @@ if __name__=='__main__':
 		torch.cuda.set_device(opts.gpuNo)
 		gen.cuda()
 	gen.load_params(opts.exDir, gpuNo=opts.gpuNo)
-	print 'params loaded'
+	print('params loaded')
 
 
 	#Find each z individually for each x
