@@ -37,13 +37,14 @@ EPSILON = 1e-6
 
 def get_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--root', default='../Data/InData/', type=str)
+	parser.add_argument('--root', default='../Data/bootsData/', type=str)
+	#parser.add_argument('--root', default='../Data/InData/', type=str)
 	parser.add_argument('--batchSize', default=128, type=int)
 	parser.add_argument('--maxEpochs', default=25, type=int)
 	parser.add_argument('--nz', default=100, type=int)
 	parser.add_argument('--lr', default=2e-4, type=float)
 	parser.add_argument('--fSize', default=64, type=int)  #multiple of filters to use
-	parser.add_argument('--outDir', default='../Data/ExperimentsSHOES', type=str)
+	parser.add_argument('--outDir', default='../Data/ExperimentsBoots', type=str)
 	parser.add_argument('--commit', required=False, type=str)
 	parser.add_argument('--gpuNo', default=0, type=int)
 	parser.add_argument('--useNoise', action='store_true')
@@ -152,7 +153,7 @@ def train_mode(gen, dis, trainLoader, useNoise=False, beta1=0.5, c=0.01, k=1, WG
 			losses['gen'].append(genLoss.data.item())
 			
 			####### Print info #######
-			if i%100==1:
+			if i%10==1:
 				print('[%d, %d] gen: %.5f, dis: %.5f, time: %.2f' \
 					% (e, i, genLoss.data.item(), disLoss.data.item(), time()-T))
 
@@ -183,6 +184,7 @@ if __name__=='__main__':
 	transform = transforms.Compose([transforms.ToPILImage(), transforms.Resize((IM_SIZE, IM_SIZE)), transforms.RandomHorizontalFlip(),\
 	 transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 	trainDataset = SHOES(root=opts.root, train=True, transform=transform)
+	print("size of train data set: ", len(trainDataset))
 	trainLoader = torch.utils.data.DataLoader(trainDataset, batch_size=opts.batchSize, shuffle=True)
 
 	transform = transforms.Compose([ transforms.ToPILImage(), transforms.Resize((IM_SIZE, IM_SIZE)), \
