@@ -1,6 +1,6 @@
 ## Inverting the Generator of a Generative Adversarial Network
 
-Code for reproducing our experiments in: https://arxiv.org/pdf/1802.05701.pdf
+Code for reproducing our experiments in: [https://arxiv.org/pdf/1802.05701.pdf]
 
 ## Data Preparation
 
