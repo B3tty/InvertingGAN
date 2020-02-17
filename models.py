@@ -46,7 +46,7 @@ class GEN(nn.Module):
 		x = lrelu(self.gen2b(self.gen2(x)))
 		x = lrelu(self.gen3b(self.gen3(x)))
 		x = lrelu(self.gen4b(self.gen4(x)))
-		x = F.tanh(self.gen5(x))
+		x = torch.tanh(self.gen5(x))
 
 		return x
 
@@ -108,7 +108,7 @@ class DIS(nn.Module):
 			# d = self.dis5(d)
 			return d
 		else:
-			d = F.sigmoid(self.dis5(d)) 
+			d = torch.sigmoid(self.dis5(d))
 			return d
 
 	def forward(self, x):
@@ -176,7 +176,7 @@ class GEN1D(nn.Module):
 		x = lrelu(self.gen2b(self.gen2(x)))
 		x = lrelu(self.gen3b(self.gen3(x)))
 		x = lrelu(self.gen4b(self.gen4(x)))
-		x = F.tanh(self.gen5(x))
+		x = torch.tanh(self.gen5(x))
 
 		return x
 
@@ -237,7 +237,7 @@ class DIS1D(nn.Module):
 		if self.WGAN:
 			return d
 		else:
-			d = F.sigmoid(self.dis5(d)) 
+			d = torch.sigmoid(self.dis5(d))
 			return d
 
 	def forward(self, x):
