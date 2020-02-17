@@ -1,0 +1,342 @@
+Prepare data loaders...
+(12532,) (12532, 136, 136, 3)
+[0]
+size of train data set:  12532
+Data loaders ready.
+Creating model using CUDA
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+[0, 1] gen: 3.66894, dis: 0.43065, time: 47.70
+[0, 11] gen: 6.20503, dis: 0.01770, time: 284.85
+[0, 21] gen: 7.09455, dis: 0.00847, time: 514.77
+[0, 31] gen: 7.76305, dis: 0.00505, time: 737.82
+[0, 41] gen: 7.82900, dis: 0.00310, time: 960.11
+[0, 51] gen: 8.02307, dis: 0.00233, time: 1182.96
+[0, 61] gen: 8.38357, dis: 0.00127, time: 1404.99
+[0, 71] gen: 8.33822, dis: 0.00120, time: 1627.77
+[0, 81] gen: 8.70285, dis: 0.00088, time: 1849.92
+[0, 91] gen: 9.00679, dis: 0.00071, time: 2071.10
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[1, 1] gen: 8.77402, dis: 0.00069, time: 44.46
+[1, 11] gen: 8.72651, dis: 0.00051, time: 267.20
+[1, 21] gen: 8.73832, dis: 0.00039, time: 489.18
+[1, 31] gen: 8.73472, dis: 0.00062, time: 714.61
+[1, 41] gen: 9.22277, dis: 0.00032, time: 938.70
+[1, 51] gen: 8.98844, dis: 0.00025, time: 1161.63
+[1, 61] gen: 9.28944, dis: 0.00036, time: 1385.10
+[1, 71] gen: 8.92070, dis: 0.00044, time: 1607.77
+[1, 81] gen: 9.20843, dis: 0.00041, time: 1830.85
+[1, 91] gen: 7.70142, dis: 0.00106, time: 2054.07
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[2, 1] gen: 10.98351, dis: 0.00059, time: 44.93
+[2, 11] gen: 4.82916, dis: 0.29793, time: 266.47
+[2, 21] gen: 8.35310, dis: 0.26803, time: 488.41
+[2, 31] gen: 9.56673, dis: 0.58936, time: 710.14
+[2, 41] gen: 0.35731, dis: 0.41416, time: 932.11
+[2, 51] gen: 3.51873, dis: 0.11491, time: 1153.65
+[2, 61] gen: 3.50983, dis: 0.09107, time: 1375.25
+[2, 71] gen: 3.36731, dis: 0.14033, time: 1597.39
+[2, 81] gen: 5.64970, dis: 0.15366, time: 1819.64
+[2, 91] gen: 4.20552, dis: 0.07671, time: 2042.74
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[3, 1] gen: 2.41784, dis: 0.16859, time: 44.76
+[3, 11] gen: 2.14498, dis: 0.85427, time: 266.78
+[3, 21] gen: 6.85092, dis: 0.38933, time: 488.79
+[3, 31] gen: 2.10437, dis: 0.08645, time: 710.69
+[3, 41] gen: 1.38279, dis: 0.33957, time: 932.09
+[3, 51] gen: 2.20692, dis: 0.37707, time: 1153.39
+[3, 61] gen: 5.04480, dis: 0.21399, time: 1375.47
+[3, 71] gen: 3.30351, dis: 0.07429, time: 1597.00
+[3, 81] gen: 1.01101, dis: 0.40309, time: 1819.00
+[3, 91] gen: 3.42235, dis: 0.11294, time: 2040.50
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[4, 1] gen: 3.47053, dis: 2.88217, time: 44.81
+[4, 11] gen: 2.48826, dis: 0.15764, time: 267.24
+[4, 21] gen: 0.82062, dis: 0.75472, time: 490.57
+[4, 31] gen: 3.57544, dis: 0.20467, time: 713.56
+[4, 41] gen: 1.18943, dis: 0.34697, time: 937.50
+[4, 51] gen: 4.24803, dis: 0.16492, time: 1160.16
+[4, 61] gen: 2.31809, dis: 0.20491, time: 1384.02
+[4, 71] gen: 3.43437, dis: 0.11620, time: 1605.90
+[4, 81] gen: 3.59390, dis: 0.07146, time: 1828.39
+[4, 91] gen: 4.56885, dis: 0.07217, time: 2050.05
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[5, 1] gen: 1.42763, dis: 0.35958, time: 44.64
+[5, 11] gen: 3.05033, dis: 0.15238, time: 266.82
+[5, 21] gen: 5.90227, dis: 1.04137, time: 488.44
+[5, 31] gen: 2.25928, dis: 0.14549, time: 709.83
+[5, 41] gen: 2.43015, dis: 0.41247, time: 931.71
+[5, 51] gen: 2.37960, dis: 0.10022, time: 1153.52
+[5, 61] gen: 2.41131, dis: 0.05192, time: 1375.94
+[5, 71] gen: 4.33145, dis: 0.07326, time: 1597.65
+[5, 81] gen: 4.23493, dis: 0.22328, time: 1819.48
+[5, 91] gen: 2.14039, dis: 0.07124, time: 2040.98
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[6, 1] gen: 3.17550, dis: 0.09539, time: 44.62
+[6, 11] gen: 3.88342, dis: 0.05790, time: 267.67
+[6, 21] gen: 2.88331, dis: 0.16516, time: 493.54
+[6, 31] gen: 1.42072, dis: 0.13559, time: 715.54
+[6, 41] gen: 3.18267, dis: 0.28374, time: 937.27
+[6, 51] gen: 4.25831, dis: 0.07147, time: 1159.47
+[6, 61] gen: 13.03318, dis: 0.18501, time: 1381.75
+[6, 71] gen: 5.34376, dis: 0.03480, time: 1604.47
+[6, 81] gen: 5.60251, dis: 0.03017, time: 1826.87
+[6, 91] gen: 7.48548, dis: 0.01560, time: 2048.75
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[7, 1] gen: 6.45722, dis: 0.01506, time: 44.69
+[7, 11] gen: 3.10918, dis: 0.26998, time: 267.03
+[7, 21] gen: 2.85284, dis: 0.21017, time: 489.10
+[7, 31] gen: 3.02933, dis: 0.15999, time: 711.28
+[7, 41] gen: 1.95045, dis: 0.24035, time: 932.88
+[7, 51] gen: 0.88041, dis: 0.38148, time: 1154.82
+[7, 61] gen: 5.10046, dis: 0.35935, time: 1376.80
+[7, 71] gen: 2.15621, dis: 0.36581, time: 1598.73
+[7, 81] gen: 4.63007, dis: 0.18404, time: 1821.63
+[7, 91] gen: 4.03246, dis: 0.15750, time: 2044.20
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[8, 1] gen: 2.98010, dis: 0.15137, time: 44.59
+[8, 11] gen: 2.28358, dis: 0.22584, time: 266.62
+[8, 21] gen: 0.31201, dis: 0.62935, time: 488.11
+[8, 31] gen: 1.88679, dis: 0.25871, time: 710.27
+[8, 41] gen: 3.69303, dis: 0.13680, time: 932.38
+[8, 51] gen: 4.74505, dis: 0.05783, time: 1154.35
+[8, 61] gen: 3.92207, dis: 0.59340, time: 1376.12
+[8, 71] gen: 6.66163, dis: 0.60493, time: 1598.14
+[8, 81] gen: 3.09216, dis: 0.19730, time: 1820.39
+[8, 91] gen: 3.07643, dis: 0.13853, time: 2042.52
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[9, 1] gen: 3.60992, dis: 0.17957, time: 44.56
+[9, 11] gen: 2.87210, dis: 0.20141, time: 266.21
+[9, 21] gen: 3.06849, dis: 0.21671, time: 487.97
+[9, 31] gen: 1.46414, dis: 0.27807, time: 709.66
+[9, 41] gen: 2.90121, dis: 0.31298, time: 936.14
+[9, 51] gen: 0.93976, dis: 0.36202, time: 1159.10
+[9, 61] gen: 1.25931, dis: 0.27803, time: 1381.02
+[9, 71] gen: 2.14685, dis: 0.30299, time: 1602.28
+[9, 81] gen: 0.21568, dis: 1.18911, time: 1824.39
+[9, 91] gen: 2.54609, dis: 0.34069, time: 2047.97
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[10, 1] gen: 2.93927, dis: 0.29483, time: 44.66
+[10, 11] gen: 1.19611, dis: 0.32351, time: 266.74
+[10, 21] gen: 2.18595, dis: 0.27582, time: 489.04
+[10, 31] gen: 3.82173, dis: 0.51326, time: 710.74
+[10, 41] gen: 6.57667, dis: 0.95083, time: 932.34
+[10, 51] gen: 2.42814, dis: 0.29326, time: 1154.14
+[10, 61] gen: 4.25030, dis: 0.53933, time: 1376.19
+[10, 71] gen: 2.49270, dis: 0.36131, time: 1598.16
+[10, 81] gen: 4.74174, dis: 0.57430, time: 1819.61
+[10, 91] gen: 0.70063, dis: 0.60120, time: 2041.72
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[11, 1] gen: 2.63458, dis: 0.26568, time: 44.83
+[11, 11] gen: 3.73865, dis: 0.33052, time: 267.08
+[11, 21] gen: 3.20977, dis: 0.43590, time: 490.71
+[11, 31] gen: 4.30643, dis: 0.88688, time: 712.87
+[11, 41] gen: 1.53417, dis: 0.30361, time: 934.42
+[11, 51] gen: 3.93143, dis: 0.86630, time: 1156.19
+[11, 61] gen: 2.07715, dis: 0.29459, time: 1378.44
+[11, 71] gen: 4.17882, dis: 0.37565, time: 1600.74
+[11, 81] gen: 4.65262, dis: 0.48876, time: 1822.56
+[11, 91] gen: 2.25063, dis: 0.31706, time: 2044.13
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[12, 1] gen: 2.37424, dis: 0.22807, time: 44.56
+[12, 11] gen: 3.24365, dis: 0.16095, time: 266.41
+[12, 21] gen: 2.77255, dis: 0.27140, time: 488.34
+[12, 31] gen: 1.65583, dis: 0.41043, time: 710.45
+[12, 41] gen: 4.74733, dis: 0.63413, time: 932.47
+[12, 51] gen: 2.83566, dis: 0.45323, time: 1154.53
+[12, 61] gen: 2.08711, dis: 0.30657, time: 1375.94
+[12, 71] gen: 2.56776, dis: 0.29886, time: 1598.69
+[12, 81] gen: 3.35899, dis: 0.28838, time: 1822.33
+[12, 91] gen: 1.52299, dis: 0.39999, time: 2044.49
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[13, 1] gen: 1.17022, dis: 0.28971, time: 44.74
+[13, 11] gen: 0.87146, dis: 0.48774, time: 266.51
+[13, 21] gen: 5.14265, dis: 0.40763, time: 488.54
+[13, 31] gen: 1.90599, dis: 0.23829, time: 710.29
+[13, 41] gen: 6.55667, dis: 0.78392, time: 932.02
+[13, 51] gen: 3.38265, dis: 0.26589, time: 1154.32
+[13, 61] gen: 2.07400, dis: 0.22332, time: 1376.14
+[13, 71] gen: 0.87378, dis: 0.38693, time: 1597.91
+[13, 81] gen: 3.17565, dis: 0.48357, time: 1820.03
+[13, 91] gen: 3.57350, dis: 0.47961, time: 2042.09
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[14, 1] gen: 3.24029, dis: 0.25797, time: 44.57
+[14, 11] gen: 3.19444, dis: 0.34607, time: 266.79
+[14, 21] gen: 0.82597, dis: 0.47729, time: 489.21
+[14, 31] gen: 2.08933, dis: 0.24433, time: 711.25
+[14, 41] gen: 4.93246, dis: 0.49455, time: 933.73
+[14, 51] gen: 0.85774, dis: 0.42651, time: 1155.95
+[14, 61] gen: 3.84878, dis: 0.31148, time: 1377.78
+[14, 71] gen: 3.33710, dis: 0.37423, time: 1600.14
+[14, 81] gen: 3.30740, dis: 0.36672, time: 1822.19
+[14, 91] gen: 1.43310, dis: 0.39372, time: 2045.02
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[15, 1] gen: 2.12677, dis: 0.29674, time: 44.57
+[15, 11] gen: 2.59857, dis: 0.30805, time: 266.48
+[15, 21] gen: 3.23618, dis: 0.49632, time: 488.90
+[15, 31] gen: 2.23892, dis: 0.24874, time: 711.20
+[15, 41] gen: 4.04512, dis: 0.45861, time: 933.73
+[15, 51] gen: 2.72025, dis: 0.28594, time: 1155.55
+[15, 61] gen: 3.08387, dis: 0.20262, time: 1378.01
+[15, 71] gen: 1.15215, dis: 0.37802, time: 1599.75
+[15, 81] gen: 0.56178, dis: 0.70942, time: 1822.51
+[15, 91] gen: 2.82716, dis: 0.23672, time: 2044.87
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[16, 1] gen: 1.43142, dis: 0.23616, time: 44.67
+[16, 11] gen: 2.92475, dis: 0.30777, time: 267.53
+[16, 21] gen: 0.78540, dis: 0.67935, time: 489.92
+[16, 31] gen: 2.74585, dis: 0.16332, time: 711.79
+[16, 41] gen: 2.10112, dis: 0.20027, time: 933.94
+[16, 51] gen: 2.50879, dis: 0.23552, time: 1155.51
+[16, 61] gen: 0.86132, dis: 0.31031, time: 1377.34
+[16, 71] gen: 2.26752, dis: 0.38676, time: 1599.68
+[16, 81] gen: 2.50026, dis: 0.28308, time: 1821.57
+[16, 91] gen: 4.75591, dis: 0.30453, time: 2043.59
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[17, 1] gen: 2.65939, dis: 0.21833, time: 44.63
+[17, 11] gen: 3.18153, dis: 0.32108, time: 266.51
+[17, 21] gen: 5.15271, dis: 0.56332, time: 488.99
+[17, 31] gen: 2.71388, dis: 0.31006, time: 710.62
+[17, 41] gen: 2.69826, dis: 0.25182, time: 933.00
+[17, 51] gen: 6.09989, dis: 0.42395, time: 1155.27
+[17, 61] gen: 1.21357, dis: 0.43327, time: 1377.58
+[17, 71] gen: 3.68181, dis: 0.41164, time: 1599.79
+[17, 81] gen: 2.45294, dis: 0.21001, time: 1822.58
+[17, 91] gen: 1.53593, dis: 0.23041, time: 2044.49
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[18, 1] gen: 2.70418, dis: 0.20355, time: 44.37
+[18, 11] gen: 4.49376, dis: 0.49842, time: 268.90
+[18, 21] gen: 2.57183, dis: 0.29861, time: 492.14
+[18, 31] gen: 2.61039, dis: 0.24146, time: 714.01
+[18, 41] gen: 1.99334, dis: 0.26791, time: 936.01
+[18, 51] gen: 3.58406, dis: 0.22829, time: 1157.90
+[18, 61] gen: 1.13329, dis: 0.26299, time: 1380.36
+[18, 71] gen: 2.40657, dis: 0.21134, time: 1602.86
+[18, 81] gen: 3.69033, dis: 0.23216, time: 1824.60
+[18, 91] gen: 4.69489, dis: 0.25957, time: 2046.70
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[19, 1] gen: 3.34481, dis: 0.28957, time: 49.39
+[19, 11] gen: 3.29575, dis: 0.16460, time: 282.95
+[19, 21] gen: 1.76069, dis: 0.23396, time: 510.09
+[19, 31] gen: 2.30540, dis: 0.29282, time: 737.85
+[19, 41] gen: 3.23697, dis: 0.23957, time: 965.06
+[19, 51] gen: 1.25221, dis: 0.36204, time: 1191.00
+[19, 61] gen: 3.22164, dis: 0.17629, time: 1426.40
+[19, 71] gen: 1.97147, dis: 0.43367, time: 1715.87
+[19, 81] gen: 2.96429, dis: 0.18236, time: 1953.05
+[19, 91] gen: 3.05736, dis: 0.15853, time: 2216.72
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+saving params...
+saving params...
+[20, 1] gen: 2.83209, dis: 0.14453, time: 48.13
+[20, 11] gen: 0.78285, dis: 0.45381, time: 284.19
+[20, 21] gen: 2.01310, dis: 0.20986, time: 512.92
+[20, 31] gen: 1.49819, dis: 0.18209, time: 740.51
+[20, 41] gen: 3.17258, dis: 0.47212, time: 972.78
+[20, 51] gen: 2.17426, dis: 0.29756, time: 1214.94
+[20, 61] gen: 2.16153, dis: 0.25506, time: 1479.87
+[20, 71] gen: 2.05323, dis: 0.27025, time: 1727.20
+[20, 81] gen: 3.16466, dis: 0.23478, time: 1995.89
+[20, 91] gen: 3.54036, dis: 0.30523, time: 2256.05
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+../utils.py:36: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure()
+saving params...
+saving params...
+^[[C[21, 1] gen: 4.69480, dis: 0.39246, time: 58.02
+[21, 11] gen: 2.55238, dis: 0.27125, time: 303.90
+[21, 21] gen: 2.77865, dis: 0.25610, time: 551.12
+[21, 31] gen: 2.03612, dis: 0.19828, time: 816.31
+[21, 41] gen: 5.21445, dis: 0.28282, time: 1067.56
+[21, 51] gen: 1.87365, dis: 0.27661, time: 1330.55
+[21, 61] gen: 1.71465, dis: 0.28619, time: 1586.36
+[21, 71] gen: 3.92824, dis: 0.71389, time: 1826.55
+[21, 81] gen: 3.19629, dis: 0.26700, time: 2070.22
+[21, 91] gen: 3.61848, dis: 0.22352, time: 2321.15
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+../utils.py:36: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure()
+saving params...
+saving params...
+[22, 1] gen: 3.35991, dis: 0.20975, time: 45.86
+[22, 11] gen: 5.17356, dis: 0.28747, time: 272.89
+[22, 21] gen: 4.28439, dis: 0.26336, time: 499.06
+[22, 31] gen: 1.94487, dis: 0.22628, time: 726.02
+[22, 41] gen: 3.67218, dis: 0.16074, time: 952.91
+[22, 51] gen: 1.44471, dis: 0.41852, time: 1179.62
+[22, 61] gen: 1.73634, dis: 0.18941, time: 1405.32
+[22, 71] gen: 1.39413, dis: 0.31484, time: 1632.42
+[22, 81] gen: 2.21671, dis: 0.27711, time: 1857.92
+[22, 91] gen: 1.29936, dis: 0.83696, time: 2084.48
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+../utils.py:36: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure()
+saving params...
+saving params...
+[23, 1] gen: 4.18401, dis: 0.46073, time: 45.77
+[23, 11] gen: 3.18207, dis: 0.28136, time: 271.86
+[23, 21] gen: 2.32005, dis: 0.53007, time: 498.08
+[23, 31] gen: 2.69266, dis: 0.30092, time: 723.49
+[23, 41] gen: 2.45936, dis: 0.19986, time: 949.72
+[23, 51] gen: 1.90388, dis: 0.22129, time: 1175.49
+[23, 61] gen: 1.02536, dis: 0.54324, time: 1403.46
+[23, 71] gen: 2.50523, dis: 0.32218, time: 1630.06
+[23, 81] gen: 4.63893, dis: 0.39208, time: 1856.22
+[23, 91] gen: 3.29761, dis: 0.16778, time: 2082.63
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+../utils.py:36: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure()
+saving params...
+saving params...
+[24, 1] gen: 3.02254, dis: 0.16162, time: 46.14
+[24, 11] gen: 0.84621, dis: 0.62096, time: 272.63
+[24, 21] gen: 3.96696, dis: 0.22303, time: 498.69
+[24, 31] gen: 4.00219, dis: 0.25595, time: 725.25
+[24, 41] gen: 3.83342, dis: 0.23016, time: 951.41
+[24, 51] gen: 5.68939, dis: 0.77673, time: 1177.50
+[24, 61] gen: 3.70497, dis: 0.99519, time: 1403.95
+[24, 71] gen: 0.90571, dis: 0.79058, time: 1629.75
+[24, 81] gen: 1.13012, dis: 0.45655, time: 1855.95
+[24, 91] gen: 2.25624, dis: 0.26022, time: 2082.36
+Outputs will be saved to: ../Data/ExperimentsBoots/Ex_1
+../utils.py:36: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure()
+saving params...
+saving params...

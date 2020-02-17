@@ -1,0 +1,15 @@
+WGAN=False
+ batchSize=128
+ c=0.01
+ commit=None
+ fSize=64
+ gpuNo=0
+ imSize=128
+ k=1
+ lr=0.0002
+ maxEpochs=25
+ nz=100
+ outDir='../Data/ExperimentsSlippers'
+ pi=0.5
+ root='../Data/slipperData/'
+ useNoise=False
