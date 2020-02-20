@@ -45,6 +45,7 @@ def plot_losses(losses, exDir, epochs=1, title='loss'):
 	plt.legend()
 	plt.title(title)
 	fig1.savefig(join(exDir, title+'_plt.png'))
+	plt.close(fig1)
 
 def plot_log_losses(losses, exDir, epochs=1, title='log_loss'):
 	#losses should be a dictionary of losses 
@@ -79,6 +80,7 @@ def plot_norm_losses(losses, exDir, epochs=1, title='loss'):
 	plt.ylabel('normalised loss')
 	plt.legend()
 	fig1.savefig(join(exDir, 'norm_'+title+'_plt.png'))
+	plt.close(fig1)
 
 
 def save_input_args(exDir, opts):

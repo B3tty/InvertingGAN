@@ -36,14 +36,16 @@ EPSILON = 1e-6
 
 def get_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--root', default='../../../../data/', type=str)
+	#parser.add_argument('--root', default='../../../../data/', type=str)
+	parser.add_argument('--root', default='../Data/bootsData/', type=str)
 	parser.add_argument('--batchSize', default=128, type=int)
 	parser.add_argument('--maxEpochs', default=200, type=int)
 	parser.add_argument('--nz', default=100, type=int)
 	parser.add_argument('--imSize', default=64, type=int)
 	parser.add_argument('--lr', default=2e-4, type=float)
 	parser.add_argument('--fSize', default=64, type=int)  #multiple of filters to use
-	parser.add_argument('--exDir', required=True, type=str)
+	#parser.add_argument('--exDir', required=True, type=str)
+	parser.add_argument('--exDir', default='../Data/InvertBoots', type=str)
 	parser.add_argument('--gpuNo', default=0, type=int)
 	parser.add_argument('--alpha', default=1e-6, type=float)
 	parser.add_argument('--data', default='SHOES', type=str)  #CELEBA, SHOES or OMNI
@@ -70,6 +72,7 @@ def find_z(gen, x, nz, lr, exDir, maxEpochs=100):
 	optZ = torch.optim.RMSprop([Zinit], lr=lr)
 
 	losses = {'rec': []}
+	print("maxepochs: ", maxEpochs)
 	for e in range(maxEpochs):
 
 		xHAT = gen.forward(Zinit)
@@ -79,8 +82,8 @@ def find_z(gen, x, nz, lr, exDir, maxEpochs=100):
 		recLoss.backward()
 		optZ.step()
 
-		losses['rec'].append(recLoss.data[0])
-		print('[%d] loss: %0.5f' % (e, recLoss.data[0]))
+		losses['rec'].append(recLoss.data.item())
+		print('[%d] loss: %0.5f' % (e, recLoss.data.item()))
 
 		#plot training losses
 		if e>0:
@@ -129,11 +132,11 @@ def find_batch_z(gen, x, nz, lr, exDir, maxEpochs=100, alpha=1e-6, batchNo=0):
 		loss.backward()
 		optZ.step()
 
-		losses['rec'].append(recLoss.data[0])
-		losses['logProb'].append(logProb.mean().data[0])
+		losses['rec'].append(recLoss.data.item())
+		losses['logProb'].append(logProb.mean().data.item())
 
 		if e%100==0:
-			print('[%d] loss: %0.5f, recLoss: %0.5f, regMean: %0.5f' % (e, loss.data[0], recLoss.data[0], logProb.mean().data[0]))
+			print('[%d] loss: %0.5f, recLoss: %0.5f, regMean: %0.5f' % (e, loss.data.item(), recLoss.data.item(), logProb.mean().data.item()))
 			# save_image(xHAT.data, join(exDir, 'rec'+str(e)+'.png'), normalize=True)
 
 		#plot training losses
@@ -145,7 +148,7 @@ def find_batch_z(gen, x, nz, lr, exDir, maxEpochs=100, alpha=1e-6, batchNo=0):
 	xHAT = gen.forward(Zinit)
 	save_image(xHAT.data, join(exDir, 'rec_batch'+str(batchNo)+'.png'), normalize=True, nrow=10)
 
-	return Zinit, recLoss.data[0], xHAT
+	return Zinit, recLoss.data.item(), xHAT
 
 
 if __name__=='__main__':
@@ -187,7 +190,7 @@ if __name__=='__main__':
 		print('Setting cuda device')
 		torch.cuda.set_device(opts.gpuNo)
 		gen.cuda()
-	gen.load_params(opts.exDir, gpuNo=opts.gpuNo)
+	#gen.load_params(opts.exDir, gpuNo=opts.gpuNo)
 	print('params loaded')
 
 
@@ -212,7 +215,7 @@ if __name__=='__main__':
 			f = open(join(exDir,'one_batch_recError.txt'), 'w')
 			f.write('mean loss (one batch) %0.5f' % (meanLoss))
 			f.write('std of loss(one batch) %0.5f' % (stdLoss))
-			f.write('Test Data (one batch) %d' % np.shape(mseLoss)[0])
+			f.write('Test Data (one batch) %d' % np.shape(mseLoss).item())
 			f.close()
 
 
